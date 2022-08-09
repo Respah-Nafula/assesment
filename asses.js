@@ -1,0 +1,86 @@
+// 3)  In your own words, explain how the script for moving the carousel works. (5 
+marks
+// A carousel in javascript is used  like a slider or  displaying multiple images or content in a single space. 
+// Carousels in javascript requires the use of id's for instance, id = "myCarousel").carousel helps in  controling  the function properly.The class="carousel" specifies the < div > that contains a carousel.The.slide class adds a CSS transition and animation effect, which makes the items slide when showing a new item.
+
+// 4)  What will the code below output to the console and why?
+var myObject = {
+    name: "Adalab",
+    func: function () {
+        var self = this;
+        console.log("outer func:  this.name = " + this.name);
+        console.log("outer func:  self.name = " + self.name);
+        (function () {
+            console.log("inner func:  this.name = " + this.name);
+            console.log("inner func:  self.name = " + self.name);
+        }());
+    }
+};
+myObject.func();
+
+//the code will not run because, self was used as a variable name which is a keyword and should not be used as a variable name
+//  The code will also not print out anything because in the second anonymous function,it is not returning anything from the function.
+//  The code will not run because name has not been initialised, i.e name="Adalab"instead of const name,var name or const name 
+
+
+
+!DOCTYPE.html >
+    <html>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="/w3css/3/w3.css">
+                    <body>
+
+                        <nav class="w3-bar w3-black">
+                            <a href="#home" class="w3-button w3-bar-item">Home</a>
+                            <a href="#tour" class="w3-button w3-bar-item">Tour</a>
+                            <a href="#contact" class="w3-button w3-bar-item">Contact</a>
+                        </nav>
+                        <!-- Slide Show -->
+                        <section>
+                            <img class="mySlides" src="https://nairobinews.nation.co.ke/wp-content/uploads/2019/09/Sauti-Sol.jpg"
+                                style="width:100%">
+                                <img class="mySlides" src="https://i2.wp.com/www.soundsofafrica.org/wp-content/uploads/2020/07/sauti-sol-2.jpg?fit=1200%2C1200&ssl=1"
+                                    style="width:100%">
+                                    <img class="mySlides" src="http://ocdn.eu/images/pulscms/NTE7MDA_/30b2539286250f255f865326b5d72f7e.png"
+                                        style="width:100%">
+                                    </section>
+                                    <!-- Band Description -->
+                                    <section class="w3-container w3-center w3-content" style="max-width:600px">
+                                        <h2 class="w3-wide">THE BAND</h2>
+                                        <p class="w3-opacity"><i>We love music</i></p>
+                                        <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                            magna aliqua.</p>
+                                    </section>
+                                   
+                                        var myIndex = 0;
+                                        carousel();
+                                        function carousel() {
+  var i;
+                                        var x = document.getElementsByClassName("mySlides");
+                                        for (i = 0; i < x.length; i++) {
+                                            x[i].style.display = "none";
+  }
+                                        myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+                                        x[myIndex-1].style.display = "block";
+                                        setTimeout(carousel, 3000);
+}
+                                    </script>
+                                </body>
+                            </html>
+
+
+//                             On the contact us page, ask the user for the following details(5 marks):
+// Company Name
+// Phone number
+// Location
+// Booking dates -- i should choose date from a calendar 
+// 1) Display this information with the filled in details. I.e grab the user input then 
+// display is on the screen(5 marks
+
+
+
