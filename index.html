@@ -1,7 +1,7 @@
 // 3)  In your own words, explain how the script for moving the carousel works. (5 
 marks
-// A carousel in javascript is used  like a slider or  displaying multiple images or content in a single space. 
-// Carousels in javascript requires the use of id's for instance, id = "myCarousel").carousel helps in  controling  the function properly.The class="carousel" specifies the < div > that contains a carousel.The.slide class adds a CSS transition and animation effect, which makes the items slide when showing a new item.
+// A carousel in javascript is used like a slider or for  displaying multiple images or content in a single space. 
+// Carousels in javascript requires the use of id's for instance, id = "myCarousel").carousel helps in  controling  the function properly.The class="carousel" specifies the <div > that contains a carousel.The.slide class adds a CSS transition and animation effect, which makes the items slide when showing a new item.
 
 // 4)  What will the code below output to the console and why?
 var myObject = {
@@ -18,9 +18,13 @@ var myObject = {
 };
 myObject.func();
 
-//the code will not run because, self was used as a variable name which is a keyword and should not be used as a variable name
-//  The code will also not print out anything because in the second anonymous function,it is not returning anything from the function.
-//  The code will not run because name has not been initialised, i.e name="Adalab"instead of const name,var name or const name 
+//This code will display 
+outer func:  this.name = Adalab
+outer func:  self.name = Adalab
+inner func:  this.name = undefined
+inner func:  self.name = Adalab
+
+The third one will display undefined because the because it is trying to access Adalab which is outside the scope
 
 
 
@@ -61,7 +65,7 @@ myObject.func();
                                         function carousel() {
   var i;
                                         var x = document.getElementsByClassName("mySlides");
-                                        for (i = 0; i < x.length; i++) {
+                                        for (i = 0; i <x.length; i++) {
                                             x[i].style.display = "none";
   }
                                         myIndex++;
@@ -73,6 +77,8 @@ myObject.func();
                                 </body>
                             </html>
 
+                            
+
 
 //                             On the contact us page, ask the user for the following details(5 marks):
 // Company Name
@@ -81,6 +87,5 @@ myObject.func();
 // Booking dates -- i should choose date from a calendar 
 // 1) Display this information with the filled in details. I.e grab the user input then 
 // display is on the screen(5 marks
-
 
 
